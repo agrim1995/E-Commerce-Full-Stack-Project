@@ -1,0 +1,211 @@
+USER_REGISTER: http://localhost:5000/api/users/register
+
+{
+   
+    "name":"Arpit",
+    "email":"ag@gmail.com",
+    "password":"123456",
+    "mobile":"8999632541",
+    "address":"Palasia",
+    "city":"Indore",
+    "gender":"Male",
+    "role":"admin"
+}
+
+===================================================================================================================
+ USER_LEGIN: http://localhost:5000/api/users/login
+
+ {
+    "status": true,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ZDc2MDQxMGE0MWEwNGJkOTZkMDE1ZCIsImlhdCI6MTcyNTQyNjM1MywiZXhwIjoxNzI1NDI5OTUzfQ.kPs7LFUsDMNqJSdSl4UA4ySP-4_rn9U9WslbYOc5wa8",
+    "message": "Login Succefully",
+    "user": {
+        "name": "arpit",
+        "email": "ag@gmail.com",
+        "id": "66d760410a41a04bd96d015d",
+        "mobile": "8999632541",
+        "address": "Palasia",
+        "city": "Indore",
+        "gender": "Male"
+    }
+}
+
+===================================================================================================================
+ CATEGORY_SAVE:http://localhost:5000/api/category/save
+
+ {
+    "status": true,
+    "message": "Category details saved successfully",
+    "cat": {
+        "catName": "furniture",
+        "_id": "66d7ff10101f93b4a2d49324",
+        "date": "2024-09-04T06:32:48.331Z",
+        "__v": 0
+    }
+}
+
+
+===================================================================================================================
+ CATEGORY_LIST:http://localhost:5000/api/category/list
+
+
+{
+    "status": true,
+    "CatList": [
+        {
+            "_id": "66d7ff10101f93b4a2d49324",
+            "catName": "furniture",
+            "date": "2024-09-04T06:32:48.331Z",
+            "__v": 0
+        }
+    ]
+}
+
+===================================================================================================================
+ CATEGORY_UPDATE: http://localhost:5000/api/category/update/:id
+
+
+ {
+    "status": true,
+    "Cat": {
+        "_id": "66d7ff10101f93b4a2d49324",
+        "catName": "furniture",
+        "date": "2024-09-04T06:32:48.331Z",
+        "__v": 0
+    },
+    "message": "Category Details Update Succefully"
+}
+
+===================================================================================================================
+ CATEGORY_DELETE: http://localhost:5000/api/category/update/:id
+
+ {
+    "status": true,
+    "Cat": {
+        "_id": "66d7ff10101f93b4a2d49324",
+        "date": "2024-09-04T06:32:48.331Z",
+        "__v": 0
+    },
+    "message": "Category Deleted Succefully"
+}
+
+
+===================================================================================================================
+ BRAND_SAVE: http://localhost:5000/api/brand/save
+
+{
+    "status": true,
+    "Brand": {
+        "brandName": "starbucks",
+        "_id": "66d8425f7e0daffa0fe461c5",
+        "__v": 0
+    },
+    "message": "Brand Added Successfully"
+}
+
+===================================================================================================================
+ BRAND_LIST: http://localhost:5000/api/brand/list
+
+{
+    "status": true,
+    "BlogList": [
+        {
+            "_id": "66d8425f7e0daffa0fe461c5",
+            "brandName": "starbucks",
+            "__v": 0
+        },
+        {
+            "_id": "66d8432caeedf0569a5b92f4",
+            "brandName": "trands",
+            "__v": 0
+        }
+    ]
+}
+
+
+===================================================================================================================
+ BRAND_UPDATE: http://localhost:5000/api/brand//update/:id
+
+ {
+    "brandName": "shoppersStop"
+
+}
+
+{
+    "status": true,
+    "brand": {
+        "_id": "66d8432caeedf0569a5b92f4",
+        "brandName": "shoppersstop",
+        "__v": 0
+    },
+    "message": "Brand updated successfully"
+}
+
+===================================================================================================================
+ BRAND_DELETE: http://localhost:5000/api/brand/delete/:id
+
+{
+    "status": true,
+    "message": "brand  deleted Succefully"
+}
+
+
+===================================================================================================================
+ PRODUCT_SAVE: http://localhost:5000/api/product/save
+
+
+{
+    "status": true,
+    "product": {
+        "productName": "Glasses",
+        "productImage": "1725549234105-AtVfKbxBpHoMOZQucR2buYRJ42mgcbm1-ch.jpeg",
+        "categoryId": "66d7ff10101f93b4a2d49324",
+        "brandId": "66d8425f7e0daffa0fe461c5",
+        "description": "made by fiber",
+        "price": "1200",
+        "_id": "66d9cab22c0a6653ef334469",
+        "date": "2024-09-05T15:13:54.112Z",
+        "__v": 0
+    },
+    "message": "Product added successfully"
+}
+===================================================================================================================
+ PRODUCT_LIST: http://localhost:5000/api/product/list
+
+{
+    "status": true,
+    "productList": [
+        {
+            "_id": "66d85e06914b9b8193b96bc2",
+            "productName": "coffee",
+            "categoryId": "66d7ff10101f93b4a2d49324",
+            "brandId": "66d8425f7e0daffa0fe461c5",
+            "description": "there are many varieties of coffee",
+            "price": "300",
+            "date": "2024-09-04T13:17:58.120Z",
+            "__v": 0
+        }
+    ]
+}
+
+
+===================================================================================================================
+ PRODUCT_UPDATE:http://localhost:5000/api/product/update/:id
+
+ {
+    "status": true,
+    "product": {
+        "_id": "66d85e06914b9b8193b96bc2",
+        "productName": "cloths",
+        "categoryId": "66d7ff10101f93b4a2d49324",
+        "brandId": "66d8425f7e0daffa0fe461c5",
+        "description": "there are many varieties of cloths",
+        "price": "300",
+        "date": "2024-09-04T13:17:58.120Z",
+        "__v": 0
+    },
+    "message": "product Details Update Succefully"
+}
+
+===================================================================================================================
+PRODUCT_DELETE: http://localhost:5000/api/product/update/:id
